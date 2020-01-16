@@ -1,0 +1,49 @@
+{
+  "name": "@cdk-lambda-layers/node-postgres",
+  "description": "AWS Lambda Layer for Node.js with postgres package",
+  "version": "1.0.1",
+  "keywords": [
+    "aws",
+    "cdk",
+    "lambda",
+    "layer",
+    "node",
+    "nodejs",
+    "knex",
+    "knexjs",
+    "psql",
+    "postgres",
+    "postgresql",
+    "lambda layer version"
+  ],
+  "author": "Tamino Martinius <dev@zaku.eu>",
+  "license": "MIT",
+  "files": [
+    "dist/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tamino-martinius/cdk-lambda-layers--node-postgres.git"
+  },
+  "engines": {
+    "node": ">=8.10.0"
+  },
+  "scripts": {
+    "prebuild": "rm -rf dist/*",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "prezip": "cd nodejs && rm -rf node_modules/* && npm i --production",
+    "zip": "rm dist/nodejs.zip; zip dist/nodejs.zip nodejs -r",
+    "prepack": "npm run build && npm run zip"
+  },
+  "dependencies": {
+    "@aws-cdk/aws-lambda": "^1.21.0",
+    "@aws-cdk/core": "^1.21.0"
+  },
+  "devDependencies": {
+    "@types/node": "^13.1.7",
+    "aws-cdk": "^1.21.0",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.7.4"
+  }
+}
