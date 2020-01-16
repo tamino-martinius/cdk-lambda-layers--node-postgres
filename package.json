@@ -17,6 +17,8 @@
     "lambda layer version"
   ],
   "author": "Tamino Martinius <dev@zaku.eu>",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
   "license": "MIT",
   "files": [
     "dist/*"
