@@ -1,7 +1,7 @@
 {
   "name": "@cdk-lambda-layers/node-postgres",
   "description": "AWS Lambda Layer for Node.js with postgres package",
-  "version": "1.0.2-0",
+  "version": "1.0.3",
   "keywords": [
     "aws",
     "cdk",
